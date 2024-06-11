@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #0d0208;
+}
+* {
+  font-family: "Space Mono", monospace;
+  color: white;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -30,4 +38,47 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.typewrite {
+  position: relative;
+}
+
+.typewrite::after {
+  --width: 13px;
+  content: '';
+  width: var(--width);
+  right: calc(var(--width) * -1 - 5px);
+  top: 0;
+  bottom: 0;
+  background-color: #01f53f;
+  position: absolute;
+  animation: blink 900ms steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes about-radius {
+  0% {
+    border-radius: 63% 37% 27% 73% / 66% 47% 53% 34%;
+  }
+  30% {
+    border-radius: 25% 75% 16% 84% / 79% 21% 79% 21%;
+  }
+  60% {
+    border-radius: 34% 66% 57% 43% / 40% 31% 69% 60%;
+  }
+  100% {
+    border-radius: 63% 37% 27% 73% / 66% 47% 53% 34%;
+  }
+}
+
+.hero-img {
+  position: relative;
+  animation: about-radius infinite 4s ease-in-out;
+  box-shadow: 0px 0px 100px #01f53e64;
 }

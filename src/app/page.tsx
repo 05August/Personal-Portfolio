@@ -1,113 +1,136 @@
-import Image from "next/image";
+import ButtonLink from '@/components/ButtonLink';
+import Layout from '../components/Layout';
+import Image from 'next/image';
 
-export default function Home() {
+
+const Home = () => {
+  const recentProjects =[
+    {
+      id: 1,
+      title: 'Project 1',
+      imageSrc: '/images/project1.jpg',
+      imageAlt: 'Project 1',
+      tags: ['React', 'Next.js'],
+      timestamp: '2023-01-01',
+      description: 'Description for Project 1',
+      slug: 'project-1',
+    },
+  ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+    <Layout title="Elliott Chong">
+      <div
+        className="flex p-4 mb-4 text-sm text-blue-800 border border-terminal-green rounded-lg bg-gray-900"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          className="flex-shrink-0 inline w-5 h-5 mr-3"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+            clipRule="evenodd"
+          ></path>
+        </svg>
+        <span className="sr-only">Info</span>
+        <div>
+          I run a
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            className="text-terminal-green underline underline-offset-2 font-semibold"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
+            href="https://www.youtube.com/@elliottchong"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+            YouTube channel
           </a>
+          where I post videos about computer science!
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="flex md:flex-row gap-16 items-center flex-col justify-center mt-0 md:mt-6">
+        <div className="flex-[3] flex flex-col">
+          <h1 className="typewrite text-5xl font-bold text-terminal-green md:inline-flex hidden w-fit">
+            Elliott Chong.
+          </h1>
+          <p className="mt-2 text-center md:text-left">
+            Computer Science enthusiast, web designer hobbyist
+          </p>
+          <ButtonLink
+            label="View CV"
+            link="/Elliott Chong CV.pdf"
+            className="font-bold mt-4 self-center md:self-start"
+          />
+        </div>
+        <div className="flex-[2]">
+          <Image
+            src="/images/hero.jpg"
+            alt="hero"
+            className="hero-img"
+            width={768}
+            height={1024}
+          />
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="mt-8 text-2xl font-bold text-white flex gap-2 items-center justify-between">
+        <span>
+          Recent
+          <span className="text-terminal-green">Projects</span>
+        </span>
+        <div className="text-sm">
+          <a href="/projects">View all Projects →</a>
+        </div>
       </div>
-    </main>
+      <div className="mt-4 flex flex-col gap-4">
+        {recentProjects.map((project) => (
+          <div
+            key={project.id}
+            className="flex rounded-md md:items-center border-2 border-terminal-green/50 p-4 flex-col gap-8 md:flex-row items-center hover:-translate-y-1 transition-all"
+          >
+            <div className="flex-[3]">
+              <Image
+                alt={project.imageAlt}
+                src={project.imageSrc}
+                width={770}
+                height={380}
+                className="object-contain rounded-md w-full p-2 shadow-xl"
+              />
+            </div>
+            <div className="flex flex-col flex-[5] justify-center md:items-start items-center gap-x-8">
+              <div className="flex gap-2 md:flex-row flex-col items-center flex-wrap">
+                <h2 className="text-xl font-semibold text-center">
+                  {project.title}
+                </h2>
+                <div className="flex gap-2 flex-wrap justify-center">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-md px-2 py-1 text-xs font-semibold border border-terminal-green items-center flex justify-center shadow-lg whitespace-nowrap"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-400 text-sm mt-3 md:mt-2 inline-flex">
+                {new Date(project.timestamp).toDateString()}
+              </p>
+              <p className="text-gray-200 mt-4">
+                {project.description}
+                <a
+                  className="text-terminal-green underline underline-offset-2"
+                  href={`/projects/${project.slug}`}
+                >
+                  Learn more
+                </a>
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Layout>
   );
-}
+};
+
+export default Home;
