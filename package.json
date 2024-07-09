@@ -12,6 +12,7 @@
     "@fontsource/space-mono": "^5.0.20",
     "@headlessui/react": "^2.0.4",
     "@next/bundle-analyzer": "^14.2.3",
+    "@svgr/webpack": "^8.1.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ButtonLink = ({
   label,
   link,
@@ -8,12 +10,12 @@ const ButtonLink = ({
   className?: string;
 }) => {
   return (
-    <a
+    <Link
       href={link}
       className={`w-fit inline-flex px-3 py-2 text-black bg-terminal-green cursor-pointer ${className}`}
     >
       {label}
-    </a>
+    </Link>
   );
 };
 

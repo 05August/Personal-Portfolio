@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 const NavItem = ({ label, link }: { label: string; link: string }) => {
   return (
     <li>
-      <a href={link} className="text-2xl text-terminal-green">
+      <Link href={link} className="text-2xl text-terminal-green">
         .{label}()
-      </a>
+      </Link>
     </li>
   );
 };

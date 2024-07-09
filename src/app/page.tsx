@@ -1,23 +1,22 @@
-import ButtonLink from '@/components/ButtonLink';
-import Layout from '../components/Layout';
-import Image from 'next/image';
-
+import ButtonLink from "@/components/ButtonLink";
+import Layout from "../components/Layout";
+import Image from "next/image";
 
 const Home = () => {
-  const recentProjects =[
+  const recentProjects = [
     {
       id: 1,
-      title: 'Project 1',
-      imageSrc: '/images/project1.jpg',
-      imageAlt: 'Project 1',
-      tags: ['React', 'Next.js'],
-      timestamp: '2023-01-01',
-      description: 'Description for Project 1',
-      slug: 'project-1',
+      title: "Project 1",
+      imageSrc: "/images/project1.jpg",
+      imageAlt: "Project 1",
+      tags: ["React", "Next.js"],
+      timestamp: "2023-01-01",
+      description: "Description for Project 1",
+      slug: "project-1",
     },
   ];
   return (
-    <Layout title="Elliott Chong">
+    <Layout>
       <div
         className="flex p-4 mb-4 text-sm text-blue-800 border border-terminal-green rounded-lg bg-gray-900"
         role="alert"
@@ -37,31 +36,26 @@ const Home = () => {
         </svg>
         <span className="sr-only">Info</span>
         <div>
-          I run a
-          <a
-            className="text-terminal-green underline underline-offset-2 font-semibold"
-            target="_blank"
-            rel="noopener"
-            href="https://www.youtube.com/@elliottchong"
-          >
-            YouTube channel
-          </a>
-          where I post videos about computer science!
+          Welcome to my portfolio! Thanks for stopping by.
+          <span className="text-terminal-green font-semibold" rel="noopener">
+            {" "}
+            Just another ChatGPT user.
+          </span>
         </div>
       </div>
       <div className="flex md:flex-row gap-16 items-center flex-col justify-center mt-0 md:mt-6">
         <div className="flex-[3] flex flex-col">
           <h1 className="typewrite text-5xl font-bold text-terminal-green md:inline-flex hidden w-fit">
-            Elliott Chong.
+            Augustt.
           </h1>
           <p className="mt-2 text-center md:text-left">
-            Computer Science enthusiast, web designer hobbyist
+            Tech enthusiast and web design hobbyist.
           </p>
-          <ButtonLink
+          {/* <ButtonLink
             label="View CV"
             link="/Elliott Chong CV.pdf"
             className="font-bold mt-4 self-center md:self-start"
-          />
+          /> */}
         </div>
         <div className="flex-[2]">
           <Image
