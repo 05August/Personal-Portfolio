@@ -6,7 +6,7 @@ import Footer from "../Footer";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div className="bg-black">
       <Navigation />
       <div className="content-container">
         {children}
